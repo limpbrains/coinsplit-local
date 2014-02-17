@@ -20,10 +20,11 @@ angular.module('Split.controllers', []).
     }];
 
   }])
-  .controller('Details', [function() {
+  .controller('Details', ['$scope', '$routeParams', function($scope, $routeParams) {
     $scope.account = {
       _id: '1',
       name: 'Mining',
+      wallet: '1BHrhrVQuxkVTcLRxxxXZjUSox4KzsVKre',
       balance: 300.01634,
       threshold: 0.01,
       created: 1231412341234,
@@ -31,7 +32,20 @@ angular.module('Split.controllers', []).
     };
 
     $scope.shares = [{
-
+      label: 'Me',
+      address: '1BHrhrVQuxkVTcLRxxxXZjUSox4KzsVKre',
+      size: 30,
+      paid: 1
+    }, {
+      label: 'Me',
+      address: '1BHrhrVQuxkVTcLRxxxXZjUSox4KzsVKre',
+      size: 10,
+      paid: 2
+    }, {
+      label: 'Me',
+      address: '1BHrhrVQuxkVTcLRxxxXZjUSox4KzsVKre',
+      size: 3,
+      paid: 3
     }];
 
   }]);

@@ -1,5 +1,42 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="page-title">{{ account.name }}</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <section class="widget" style="height:310px">
+      <header>
+        <h4>
+          <i class="fa fa-bitcoin"></i>
+          Wallet
+        </h4>
+      </header>
+      <div class="body">
+        <center>
+          <h3>{{ account.wallet }}</h3>
+          <img src=""><br>
+          <strong>Balance: {{ account.balance|number }}</strong>
+          <br>Payout threshold: {{ account.threshold|number }}
+        </center>
+        </div>
+      </section>
+  </div>
+
+  <div class="col-md-6">
+    <section class="widget" style="height:310px">
+      <header>
+        <h4>
+          <i class="eicon-chart-pie"></i>
+          Chart
+        </h4>
+      </header>
+      <div class="body" style="height:100%" lass="">
+        <center style="height:100%">
+            <div id="piechart" style="height:100%; width:300px"><svg width="280" height="280"><g transform="translate(140,140)"><g class="arc"><path d="M8.572244476756641e-15,-140A140,140 0 0,1 82.28993532094624,113.26237921249265L58.778525229247315,80.90169943749474A100,100 0 0,0 6.123031769111886e-15,-100Z" style="fill: #1f77b4;"></path><text transform="translate(114.12678195541842,-37.08203932499369)" dy=".35em" style="text-anchor: middle;">0.4</text></g><g class="arc"><path d="M82.28993532094624,113.26237921249265A140,140 0 1,1 -2.5716733430269922e-14,-140L-1.836909530733566e-14,-100A100,100 0 1,0 58.778525229247315,80.90169943749474Z" style="fill: #aec7e8;"></path><text transform="translate(-114.12678195541842,37.0820393249937)" dy=".35em" style="text-anchor: middle;">0.6</text></g><text x="0" y="0" dy=".35em" style="text-anchor: middle;">1 total size</text></g></svg></div>
+        </center>
+      </div>
+    </section>
+  </div>
+</div>
