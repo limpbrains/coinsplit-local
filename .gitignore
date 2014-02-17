@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+
+# Bower stuff.
+bower_components/
+
+# build stuff.
+dist
+dist/*

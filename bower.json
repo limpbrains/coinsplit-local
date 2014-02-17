@@ -1,0 +1,14 @@
+{
+  "name": "coinsplit-local",
+  "version": "0.0.1",
+  "ignore": [
+    ".jshintrc"
+  ],
+  "dependencies": {
+    "angular": "*",
+    "angular-route": "*",
+    "angular-event-emitter": "*",
+    "angular-ui-bootstrap": "*"
+  },
+  "devDependencies": {}
+}
