@@ -3,15 +3,15 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     ngtemplates:  {
       myApp:        {
-        cwd:      'app',
+        cwd:      'application/app',
         src:      'partials/**.html',
-        dest:     '_public/templates.js'
+        dest:     'application/_public/templates.js'
       }
     },
     nodewebkit: {
       options: {
         // version: "0.9.1",
-        build_dir: '../dist',
+        build_dir: './dist',
         // specifiy what to build
         mac: false,
         win: false,
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         keep_nw: true
       },
       src: [
-        './**/*'
+        './application/**/*'
       ]
     }
   });

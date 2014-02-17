@@ -5,8 +5,7 @@
   "version": "0.0.1",
   "homepage": "https://github.com/limpbrains/coinsplit-local",
   "devDependencies": {
-    "grunt-angular-templates": "~0.5.3",
-    "grunt-cli": "*",
-    "grunt-node-webkit-builder": "*"
-  }
+  },
+
+  "main": "app/index.html"
 }
