@@ -7,5 +7,20 @@
   "devDependencies": {
   },
 
-  "main": "app/index.html"
+  "main": "app/index.html",
+  "window": {
+    "//": "screen settings",
+    "title": "coinsplit.io/local - Automate bitcoin payments",
+    "icon": "link.png",
+    "toolbar": false,
+    "frame": true,
+    "position": "center",
+    "width": 1024,
+    "height": 768,
+    "min_width": 1024,
+    "min_height": 768,
+    "resizable": true,
+    "always-on-top": false,
+    "fullscreen": false
+  }
 }
