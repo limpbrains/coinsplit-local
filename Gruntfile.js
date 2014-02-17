@@ -22,11 +22,18 @@ module.exports = function(grunt) {
       src: [
         './application/**/*'
       ]
-    }
+    },
+    watch: {
+      templates: {
+        files: ['application/app/partials/*.html'],
+        tasks: ['ngtemplates']
+      },
+    },
   });
 
   grunt.loadNpmTasks('grunt-angular-templates');
   grunt.loadNpmTasks('grunt-node-webkit-builder');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['ngtemplates']);
+  grunt.registerTask('default', ['ngtemplates', 'nodewebkit']);
 };

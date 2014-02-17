@@ -7,6 +7,7 @@
   "devDependencies": {
     "grunt-angular-templates": "~0.5.3",
     "grunt-cli": "*",
-    "grunt-node-webkit-builder": "*"
+    "grunt-node-webkit-builder": "*",
+    "grunt-contrib-watch": "~0.5.3"
   }
 }
