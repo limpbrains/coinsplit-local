@@ -11,6 +11,9 @@
     "karma-jasmine": "~0.1",
     "protractor": "~0.17.0",
     "grunt-angular-templates": "~0.5.3",
-    "grunt-cli": "*"
-  }
+    "grunt-cli": "*",
+    "grunt-node-webkit-builder": "*"
+  },
+
+  "main": "app/index.html"
 }
