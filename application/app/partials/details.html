@@ -14,12 +14,20 @@
         </h4>
       </header>
       <div class="body">
-        <center>
-          <h3>{{ account.wallet }}</h3>
-          <qrcode version="4" error-correction-level="M" size="200" data="{{account.wallet}}"></qrcode>
-          <strong>Balance: {{ account.balance|number }}</strong>
-          <br>Payout threshold: {{ account.threshold|number }}
-        </center>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="text-align-center">
+                <qrcode version="4" error-correction-level="M" size="200" data="{{account.wallet}}"></qrcode>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+            <h3>{{ account.wallet }}</h3>
+
+            <strong>Balance: {{ account.balance|number }}</strong>
+            <br>Payout threshold: {{ account.threshold|number }}
+          </div>
+        </div>
       </div>
     </section>
 
