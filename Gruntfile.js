@@ -2,7 +2,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     ngtemplates:  {
-      myApp:        {
+      Split:        {
         cwd:      'application/app',
         src:      'partials/**.html',
         dest:     'application/_public/templates.js'
