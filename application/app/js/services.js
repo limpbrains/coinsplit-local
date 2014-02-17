@@ -1,9 +1,26 @@
 'use strict';
+/* jshint undef:false */
 
-/* Services */
-
-
-// Demonstrate how to register services
-// In this case it is a simple value service.
 angular.module('Split.services', []).
-  value('version', '0.1');
+  factory('API', [function () {
+    var Service = {},
+        path = require('path'),
+        dataPath = require('nw.gui').App.dataPath,
+        Datastore = require('nedb'),
+        db = {
+          accounts: new Datastore({ filename: path.join(dataPath, 'accounts.db'), autoload: true }),
+          shares: new Datastore({ filename: path.join(dataPath, 'shares.db'), autoload: true })
+        };
+
+    Service.addAccount = function(name, threshold, cb) {
+      db.accounts.insert({
+        name: name,
+        threshold: threshold
+      }, cb);
+    };
+
+    Service.db = db;
+
+    return Service;
+
+  }]);

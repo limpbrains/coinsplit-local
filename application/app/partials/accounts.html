@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-md-12">
       <h2 class="page-title">Accounts
-        <small>
-          <a class="btn btn-primary" href="#/add">
+        <div class="pull-right">
+          <a ng-click="add()" class="btn btn-primary">
             <i class="fa fa-plus"> Add</i>
           </a>
-        </small>
+        </div>
     </h2>
   </div>
 </div>
@@ -43,7 +43,7 @@
               <td>{{ a.created|date }}</td>
               <td>{{ a.updated|date }}</td>
               <td>
-                <button class="btn btn-sm btn-warning" data-toggle="button">
+                <button class="btn btn-sm btn-warning" ng-click="remove(a)">
                   Delete
                 </button>
               </td>

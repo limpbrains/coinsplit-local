@@ -4,15 +4,13 @@
   "description": "Local version of https://coinsplit.io",
   "version": "0.0.1",
   "homepage": "https://github.com/limpbrains/coinsplit-local",
-  "devDependencies": {
-  },
-
+  "devDependencies": {},
   "main": "app/index.html",
   "window": {
     "//": "screen settings",
     "title": "coinsplit.io/local - Automate bitcoin payments",
     "icon": "link.png",
-    "toolbar": false,
+    "toolbar": true,
     "frame": true,
     "position": "center",
     "width": 1024,
@@ -22,5 +20,8 @@
     "resizable": true,
     "always-on-top": false,
     "fullscreen": false
+  },
+  "dependencies": {
+    "nedb": "~0.10.4"
   }
 }
