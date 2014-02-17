@@ -20,8 +20,45 @@
           <strong>Balance: {{ account.balance|number }}</strong>
           <br>Payout threshold: {{ account.threshold|number }}
         </center>
-        </div>
-      </section>
+      </div>
+    </section>
+
+    <section class="widget">
+      <header>
+        <h4>
+          <i class="fa fa-exchange"></i>
+          Transactions
+        </h4>
+      </header>
+      <div class="body">
+        <table class="table table-striped no-margin sources-table" style="table-layout: fixed;">
+          <thead>
+            <tr>
+              <th width="10%">Amount</th>
+              <th>Time</th>
+              <th>Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="color:red; white-space:nowrap;"><i class="fa fa-arrow-left"></i> -0.00010000</td>
+              <td>Jan. 13, 2014, 11:40 p.m.</td>
+              <td>Bitcoin fee</td>
+            </tr>
+            <tr>
+              <td style="color:red; white-space:nowrap;"><i class="fa fa-arrow-left"></i> -0.00036000</td>
+              <td>Jan. 13, 2014, 11:40 p.m.</td>
+              <td style="word-wrap: break-word;">1Kxb2NPvXZDPsPWZ47L8uEbSeyLQ41EfYD</td>
+            </tr>
+            <tr>
+              <td style="color:red; white-space:nowrap;"><i class="fa fa-arrow-left"></i> -0.00054000</td>
+              <td>Jan. 13, 2014, 11:40 p.m.</td>
+              <td style="word-wrap: break-word;">1Jr7MXiDxcmdKcnWe6fizi7gNMGkEMVnaQ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </div>
 
   <div class="col-md-6">
@@ -36,6 +73,35 @@
         <center style="height:100%">
             <div id="piechart" style="height:100%; width:300px"><svg width="280" height="280"><g transform="translate(140,140)"><g class="arc"><path d="M8.572244476756641e-15,-140A140,140 0 0,1 82.28993532094624,113.26237921249265L58.778525229247315,80.90169943749474A100,100 0 0,0 6.123031769111886e-15,-100Z" style="fill: #1f77b4;"></path><text transform="translate(114.12678195541842,-37.08203932499369)" dy=".35em" style="text-anchor: middle;">0.4</text></g><g class="arc"><path d="M82.28993532094624,113.26237921249265A140,140 0 1,1 -2.5716733430269922e-14,-140L-1.836909530733566e-14,-100A100,100 0 1,0 58.778525229247315,80.90169943749474Z" style="fill: #aec7e8;"></path><text transform="translate(-114.12678195541842,37.0820393249937)" dy=".35em" style="text-anchor: middle;">0.6</text></g><text x="0" y="0" dy=".35em" style="text-anchor: middle;">1 total size</text></g></svg></div>
         </center>
+      </div>
+    </section>
+
+    <section class="widget">
+      <header>
+        <h4>
+          <i class="eicon-chart-pie"></i>
+          Shares
+        </h4>
+      </header>
+      <div class="body">
+        <table class="table table-striped no-margin sources-table">
+          <thead>
+            <tr>
+                <th>Lable</th>
+                <th>Address</th>
+                <th>Size</th>
+                <th>Paid</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="s in shares">
+              <td><span style="width: 16px; height: 16px; display: inline-block; background-color: rgb(31, 119, 180); margin-right: 7px; position: relative; top: 2px;"></span> {{ s.label }}</td>
+              <td>{{ s.address }}</td>
+              <td>{{ s.size }}</td>
+              <td>{{ s.paid }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </div>
