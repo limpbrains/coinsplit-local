@@ -16,7 +16,7 @@
       <div class="body">
         <center>
           <h3>{{ account.wallet }}</h3>
-          <img src=""><br>
+          <qrcode version="4" error-correction-level="M" size="200" data="{{account.wallet}}"></qrcode>
           <strong>Balance: {{ account.balance|number }}</strong>
           <br>Payout threshold: {{ account.threshold|number }}
         </center>

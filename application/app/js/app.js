@@ -4,6 +4,7 @@
 // Declare app level module which depends on filters, and services
 angular.module('Split', [
   'ngRoute',
+  'monospaced.qrcode',
   'Split.filters',
   'Split.services',
   'Split.directives',
