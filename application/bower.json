@@ -9,7 +9,7 @@
     "angular-route": "*",
     "angular-event-emitter": "*",
     "angular-ui-bootstrap": "*",
-    "monospaced/angular-qrcode": "*",
+    "angular-qrcode": "*",
     "angular-bootstrap": "*"
   },
   "devDependencies": {}

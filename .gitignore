@@ -10,3 +10,6 @@ dist/*
 
 # public
 _public
+
+# OS related stuff
+.DS_Store
